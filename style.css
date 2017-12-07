@@ -1,0 +1,102 @@
+
+
+body{
+
+    background-color: teal;
+}
+.amarillo{
+    margin-top: 113px;
+    margin-left: 25px;
+ 
+    position: absolute;
+        width: 100px;
+        height: 100px;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        background:rgb(255, 175, 1);
+}
+
+
+
+.verde{
+    margin-top: 225px;
+    margin-left: 25px;
+ 
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background:rgb(0, 255, 64);
+ }
+
+ .rojo{
+        margin-left: 25px;
+        margin-top:  10px ;
+        position: absolute;
+         width: 90px;
+         height: 90px;
+         -moz-border-radius: 50%;
+         -webkit-border-radius: 50%;
+         border-radius: 50%;
+         background:rgb(255, 0, 0);
+ }
+
+ .semaforo{
+        margin: auto;
+        border-radius: 9%;
+        width: 150px; 
+        height: 350px; 
+        background: #2a343b;
+   }
+
+.off{
+
+    background: gray;
+}
+
+
+.poster{
+    margin: auto;
+    width: 40px;
+    height: 500px;
+    background-color:#2a343b;
+
+
+
+
+
+}
+
+
+.animated {
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+   }
+   @-webkit-keyframes flash {
+    0%, 50%, 100% {
+    opacity: 1;
+    }
+   25%, 75% {
+    opacity: 0;
+    }
+   }
+   @keyframes flash {
+    0%, 50%, 100% {
+    opacity: 1;
+    }
+   25%, 75% {
+    opacity: 0;
+    }
+   }
+   .flash {
+    -webkit-animation-name: flash;
+    animation-name: flash;
+   }
+

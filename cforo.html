@@ -1,0 +1,86 @@
+
+
+<!DOCTYPE HTML>
+
+<html>
+
+<head>  
+        <link rel="stylesheet" href="style.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>SEMAFORO</title>
+</head>
+
+<body>
+<div id="cuerpo">
+        <div id="semaforo" class="semaforo ">
+                <div id="rojo" ></div>
+                <div id="amarillo">
+                </div>
+                <div id="verde">
+                </div>
+        </div>
+        
+</div>
+</div>
+<div id="poster" class="poster"></div>
+<div id="hora"></div>
+	<footer>
+        <p>Copyright Luis Miguel Burdier, a las 8 AM el semaforo dura un minuto en  verde </p>
+
+	</footer>
+
+        <script>
+            var verdeTiempo = 3000;
+            tiempo = new Date();
+            function rojoon(){
+                document.getElementById("rojo").className = "rojo";
+                document.getElementById("verde").className = ["verde off"];
+                document.getElementById("amarillo").className = ["amarillo off"];
+                setTimeout(function() {
+                    verdeon(amarilloon);   
+                }, 3000);
+                
+            }
+
+            
+           
+            function amarilloon(){
+                document.getElementById("amarillo").className ="amarillo";
+                document.getElementById("rojo").className = ["rojo off"];
+                document.getElementById("verde").className = ["verde off"];
+                setTimeout(function(){
+                    rojoon();
+                    
+                },3000)
+       
+            }
+           
+            function verdeon(callback){
+                document.getElementById("verde").className = "verde animated flash";
+                document.getElementById("rojo").className = ["rojo off"];
+                document.getElementById("amarillo").className = ["amarillo off"];
+                setTimeout(function(){
+                 callback();
+                },verdeTiempo)
+            }
+
+
+
+      
+            setInterval(function(){ 
+            tiempo = new Date();
+            var data  = document.getElementById("hora");
+            data.innerHTML = "<h1> la hora es " +tiempo.getHours() + " con " + tiempo.getMinutes()  +" minutos "+ " y " + tiempo.getSeconds()+" segundos</h1> ";
+             }, 1000);
+
+             if (tiempo.getHours() === 8){verdeTiempo = 10000};
+             verdeon(amarilloon);
+             
+
+        </script>
+     
+</body>
+
+</html>
+
+
